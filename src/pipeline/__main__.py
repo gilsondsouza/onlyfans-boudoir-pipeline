@@ -66,7 +66,7 @@ def run(ctx: click.Context, model: str | None, dry_run: bool) -> None:
 
     any_failed = False
     for model_name in targets:
-        click.echo(f"▶ Processando modelo: [bold]{model_name}[/bold]" if False else f"▶ {model_name}")
+        click.echo(f"▶ {model_name}")
         pipeline_run = run_pipeline(model_name, dry_run=dry_run)
         click.echo(pipeline_run.summary)
         click.echo()
