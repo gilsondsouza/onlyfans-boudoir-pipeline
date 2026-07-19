@@ -1,4 +1,4 @@
-"""Testes para o módulo de modelos."""
+"""Tests for the models module."""
 
 import pytest
 

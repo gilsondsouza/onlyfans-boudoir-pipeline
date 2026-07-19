@@ -1,4 +1,4 @@
-"""Testes para o agente interativo."""
+"""Tests for the interactive agent."""
 
 import pytest
 

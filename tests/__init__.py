@@ -1,1 +1,1 @@
-"""Testes do pipeline."""
+"""Pipeline tests."""

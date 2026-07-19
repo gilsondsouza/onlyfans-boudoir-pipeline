@@ -1,4 +1,4 @@
-"""Testes para o pipeline de produção de conteúdo."""
+"""Tests for the content production pipeline."""
 
 from onlyfans_boudoir_pipeline.agent import ContentRequest, InteractiveAgent
 from onlyfans_boudoir_pipeline.pipeline import BoudoirPipeline
