@@ -1,0 +1,55 @@
+# Arquivos de ambiente (nunca commitar)
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+
+# Pytest e cobertura
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Mypy
+.mypy_cache/
+
+# Ruff / Black
+.ruff_cache/
+
+# Banco de dados local
+*.db
+*.sqlite
+*.sqlite3
+
+# Mídia (não versionada)
+media/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Distribuição
+*.tar.gz
+*.zip

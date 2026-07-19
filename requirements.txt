@@ -1,0 +1,72 @@
+# Dependências do OnlyFans Boudoir Pipeline
+
+# =============================================================================
+# Core
+# =============================================================================
+python-dotenv>=1.0.0           # Carregamento de variáveis de ambiente
+pyyaml>=6.0.1                  # Leitura de arquivos de configuração YAML
+click>=8.1.7                   # Interface de linha de comando
+rich>=13.7.0                   # Output formatado no terminal
+loguru>=0.7.2                  # Logging avançado
+
+# =============================================================================
+# Agente de IA / LLM
+# =============================================================================
+openai>=1.30.0                 # Cliente OpenAI (GPT-4o, etc.)
+anthropic>=0.28.0              # Cliente Anthropic (Claude)
+langchain>=0.2.0               # Framework de agentes LLM
+langchain-openai>=0.1.0
+langchain-anthropic>=0.1.0
+
+# =============================================================================
+# Banco de Dados
+# =============================================================================
+sqlalchemy>=2.0.30             # ORM para banco de dados
+alembic>=1.13.1                # Migrações de banco de dados
+
+# =============================================================================
+# Processamento de Mídia
+# =============================================================================
+Pillow>=10.3.0                 # Manipulação de imagens
+moviepy>=1.0.3                 # Processamento de vídeo
+imageio>=2.34.0                # I/O de imagens e vídeos
+
+# =============================================================================
+# HTTP / API
+# =============================================================================
+httpx>=0.27.0                  # Cliente HTTP assíncrono
+aiohttp>=3.9.5                 # HTTP assíncrono
+tenacity>=8.3.0                # Retry/backoff automático
+
+# =============================================================================
+# Agendamento
+# =============================================================================
+apscheduler>=3.10.4            # Agendamento de tarefas
+pytz>=2024.1                   # Fusos horários
+
+# =============================================================================
+# Analytics e Dashboard
+# =============================================================================
+pandas>=2.2.2                  # Manipulação de dados
+plotext>=5.2.8                 # Gráficos no terminal
+
+# =============================================================================
+# Storage (opcional)
+# =============================================================================
+boto3>=1.34.0                  # AWS S3
+google-cloud-storage>=2.16.0   # Google Cloud Storage
+
+# =============================================================================
+# Notificações (opcional)
+# =============================================================================
+python-telegram-bot>=21.3      # Notificações Telegram
+
+# =============================================================================
+# Desenvolvimento e Testes
+# =============================================================================
+pytest>=8.2.0
+pytest-asyncio>=0.23.7
+pytest-cov>=5.0.0
+black>=24.4.2
+ruff>=0.4.7
+mypy>=1.10.0
