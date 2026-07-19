@@ -1,4 +1,4 @@
-"""Modelos de personagem para o pipeline boudoir."""
+"""Character models for the boudoir pipeline."""
 
 from dataclasses import dataclass
 from enum import Enum
@@ -6,7 +6,7 @@ from typing import List
 
 
 class ModelStyle(str, Enum):
-    """Estilos fotográficos suportados."""
+    """Supported photographic styles."""
 
     ROMANTIC = "romantic"
     EDITORIAL = "editorial"
@@ -19,7 +19,7 @@ class ModelStyle(str, Enum):
 
 @dataclass(frozen=True)
 class ModelProfile:
-    """Perfil de uma modelo do pipeline."""
+    """Model profile for the pipeline."""
 
     id: str
     name: str
@@ -82,13 +82,13 @@ MODELS: tuple[ModelProfile, ...] = (
 
 
 def get_model_by_id(model_id: str) -> ModelProfile:
-    """Retorna uma modelo pelo identificador.
+    """Returns a model by identifier.
 
     Args:
-        model_id: Identificador único da modelo.
+        model_id: Unique model identifier.
 
     Raises:
-        ValueError: Se nenhuma modelo for encontrada com o ID fornecido.
+        ValueError: If no model is found with the provided ID.
     """
     for model in MODELS:
         if model.id == model_id:
@@ -97,5 +97,5 @@ def get_model_by_id(model_id: str) -> ModelProfile:
 
 
 def list_models() -> List[ModelProfile]:
-    """Lista todos os perfis de modelo disponíveis."""
+    """Lists all available model profiles."""
     return list(MODELS)

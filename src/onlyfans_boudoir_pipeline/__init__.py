@@ -1,3 +1,3 @@
-"""Pipeline autônomo de produção de conteúdo boudoir artístico para OnlyFans."""
+"""Autonomous artistic boudoir content production pipeline for OnlyFans."""
 
 __version__ = "0.1.0"
