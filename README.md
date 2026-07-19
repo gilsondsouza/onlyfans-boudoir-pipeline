@@ -1,14 +1,14 @@
 # onlyfans-boudoir-pipeline
-Pipeline autônomo de produção de conteúdo boudoir artístico para OnlyFans - 7 modelos + agente interativo
+Autonomous artistic boudoir content production pipeline for OnlyFans - 7 models + interactive agent
 
-## Estrutura
+## Structure
 
-- `src/onlyfans_boudoir_pipeline/models.py` — perfis de 7 modelos com estilos fotográficos distintos.
-- `src/onlyfans_boudoir_pipeline/agent.py` — agente interativo que sugere modelos e monta prompts.
-- `src/onlyfans_boudoir_pipeline/pipeline.py` — orquestração do pipeline de geração de conteúdo.
-- `tests/` — testes automatizados com `pytest`.
+- `src/onlyfans_boudoir_pipeline/models.py` — profiles for 7 models with distinct photographic styles.
+- `src/onlyfans_boudoir_pipeline/agent.py` — interactive agent that suggests models and builds prompts.
+- `src/onlyfans_boudoir_pipeline/pipeline.py` — orchestration for content generation pipeline.
+- `tests/` — automated tests with `pytest`.
 
-## Instalação
+## Installation
 
 ```bash
 python -m venv .venv
@@ -16,13 +16,13 @@ source .venv/bin/activate
 pip install -e ".[dev]"
 ```
 
-## Testes
+## Tests
 
 ```bash
 pytest -v
 ```
 
-## Uso rápido
+## Quick start
 
 ```python
 from onlyfans_boudoir_pipeline.agent import InteractiveAgent
