@@ -93,7 +93,7 @@ def get_model_by_id(model_id: str) -> ModelProfile:
     for model in MODELS:
         if model.id == model_id:
             return model
-    raise ValueError(f"Modelo com ID '{model_id}' não encontrado")
+    raise ValueError(f"Model with ID '{model_id}' not found")
 
 
 def list_models() -> List[ModelProfile]:

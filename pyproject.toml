@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "onlyfans-boudoir-pipeline"
 version = "0.1.0"
-description = "Pipeline autônomo de produção de conteúdo boudoir artístico para OnlyFans - 7 modelos + agente interativo"
+description = "Autonomous artistic boudoir content production pipeline for OnlyFans - 7 models + interactive agent"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
