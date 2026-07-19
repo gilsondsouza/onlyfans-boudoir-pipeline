@@ -77,16 +77,24 @@ def run(ctx: click.Context, model: str | None, dry_run: bool) -> None:
         raise SystemExit(1)
 
 
+_COL_MODEL = 15
+_COL_DISPLAY = 15
+_COL_PRICE = 12
+
+
 @main.command()
 def list_models() -> None:
     """Lista todos os modelos configurados e seus status."""
     profiles = load_all_profiles()
-    click.echo(f"{'Modelo':<15} {'Display':<15} {'Assinatura':>12}  Horários de pico")
-    click.echo("-" * 60)
+    click.echo(
+        f"{'Modelo':<{_COL_MODEL}} {'Display':<{_COL_DISPLAY}} "
+        f"{'Assinatura':>{_COL_PRICE}}  Horários de pico"
+    )
+    click.echo("-" * (_COL_MODEL + _COL_DISPLAY + _COL_PRICE + 20))
     for name, p in profiles.items():
         hours = ", ".join(str(h) + "h" for h in p.posting.peak_hours)
         click.echo(
-            f"{name:<15} {p.display_name:<15} "
+            f"{name:<{_COL_MODEL}} {p.display_name:<{_COL_DISPLAY}} "
             f"USD {p.pricing.subscription_usd:>6.2f}   {hours}"
         )
 
