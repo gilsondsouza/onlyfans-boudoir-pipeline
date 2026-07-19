@@ -80,7 +80,7 @@ Cada modelo possui uma persona única, estilo visual e estratégia de conteúdo 
 | 4 | **Luna** | Dark & Editorial | Fotografia conceitual e avant-garde |
 | 5 | **Bianca** | Fitness & Empoderamento | Estilo de vida ativo e sensual |
 | 6 | **Isabelle** | Boho & Alternativo | Arte corporal e fotografia indie |
-| 7 | **Marina** | Praia & Tropical** | Lifestyle costeiro e fotografia ao ar livre |
+| 7 | **Marina** | Praia & Tropical | Lifestyle costeiro e fotografia ao ar livre |
 
 Cada perfil é configurável via `config/models.yaml` com parâmetros de:
 - Persona e tom de voz para mensagens automáticas
