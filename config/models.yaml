@@ -1,0 +1,209 @@
+# =============================================================================
+# OnlyFans Boudoir Pipeline — Perfis dos 7 Modelos
+# =============================================================================
+
+models:
+
+  # ---------------------------------------------------------------------------
+  # 1. Aurora — Natural & Minimalista
+  # ---------------------------------------------------------------------------
+  aurora:
+    display_name: "Aurora"
+    enabled: true
+    credentials:
+      username: "${AURORA_OF_USERNAME}"
+      # Demais credenciais gerenciadas via vault de secrets
+    persona:
+      description: "Fotografia natural, minimalista e artística"
+      aesthetic: natural_minimalist
+      tone_of_voice: "amigável, autêntica, descontraída"
+      language: "pt-BR"
+    style:
+      color_palette: ["#F5E6D3", "#E8D5B7", "#C4A882"]
+      mood: ["sereno", "natural", "íntimo"]
+    posting:
+      frequency: "2/day"
+      peak_hours: [18, 20, 22]
+      timezone: "America/Sao_Paulo"
+      content_types:
+        photos: 0.70
+        videos: 0.20
+        stories: 0.10
+    pricing:
+      subscription_usd: 9.99
+      ppv_enabled: true
+      ppv_price_range: [5, 25]
+
+  # ---------------------------------------------------------------------------
+  # 2. Valentina — Glamour & Elegante
+  # ---------------------------------------------------------------------------
+  valentina:
+    display_name: "Valentina"
+    enabled: true
+    credentials:
+      username: "${VALENTINA_OF_USERNAME}"
+    persona:
+      description: "Boudoir clássico, luxo e alta moda"
+      aesthetic: glamour_elegant
+      tone_of_voice: "sofisticada, confiante, exclusiva"
+      language: "pt-BR"
+    style:
+      color_palette: ["#1A1A2E", "#C9A84C", "#FFFFFF"]
+      mood: ["luxuoso", "elegante", "misterioso"]
+    posting:
+      frequency: "1/day"
+      peak_hours: [19, 21]
+      timezone: "America/Sao_Paulo"
+      content_types:
+        photos: 0.60
+        videos: 0.30
+        stories: 0.10
+    pricing:
+      subscription_usd: 19.99
+      ppv_enabled: true
+      ppv_price_range: [15, 50]
+
+  # ---------------------------------------------------------------------------
+  # 3. Sofia — Vintage & Romântico
+  # ---------------------------------------------------------------------------
+  sofia:
+    display_name: "Sofia"
+    enabled: true
+    credentials:
+      username: "${SOFIA_OF_USERNAME}"
+    persona:
+      description: "Estética retrô, pin-up artístico e romanticismo"
+      aesthetic: vintage_romantic
+      tone_of_voice: "doce, nostálgica, poética"
+      language: "pt-BR"
+    style:
+      color_palette: ["#F2A7BB", "#FFF0E6", "#8B6F6F"]
+      mood: ["romântico", "vintage", "delicado"]
+    posting:
+      frequency: "2/day"
+      peak_hours: [17, 20, 22]
+      timezone: "America/Sao_Paulo"
+      content_types:
+        photos: 0.75
+        videos: 0.15
+        stories: 0.10
+    pricing:
+      subscription_usd: 12.99
+      ppv_enabled: true
+      ppv_price_range: [8, 30]
+
+  # ---------------------------------------------------------------------------
+  # 4. Luna — Dark & Editorial
+  # ---------------------------------------------------------------------------
+  luna:
+    display_name: "Luna"
+    enabled: true
+    credentials:
+      username: "${LUNA_OF_USERNAME}"
+    persona:
+      description: "Fotografia conceitual, avant-garde e dark art"
+      aesthetic: dark_editorial
+      tone_of_voice: "intensa, artística, provocativa"
+      language: "pt-BR"
+    style:
+      color_palette: ["#0D0D0D", "#4A0E4E", "#C0C0C0"]
+      mood: ["sombrio", "conceitual", "poderoso"]
+    posting:
+      frequency: "1/day"
+      peak_hours: [21, 23]
+      timezone: "America/Sao_Paulo"
+      content_types:
+        photos: 0.55
+        videos: 0.35
+        stories: 0.10
+    pricing:
+      subscription_usd: 14.99
+      ppv_enabled: true
+      ppv_price_range: [10, 40]
+
+  # ---------------------------------------------------------------------------
+  # 5. Bianca — Fitness & Empoderamento
+  # ---------------------------------------------------------------------------
+  bianca:
+    display_name: "Bianca"
+    enabled: true
+    credentials:
+      username: "${BIANCA_OF_USERNAME}"
+    persona:
+      description: "Estilo de vida ativo, fitness e empoderamento feminino"
+      aesthetic: fitness_empowerment
+      tone_of_voice: "motivadora, enérgica, empoderada"
+      language: "pt-BR"
+    style:
+      color_palette: ["#FF6B35", "#1E1E2E", "#FFFFFF"]
+      mood: ["energético", "poderoso", "sensual"]
+    posting:
+      frequency: "3/day"
+      peak_hours: [7, 12, 19]
+      timezone: "America/Sao_Paulo"
+      content_types:
+        photos: 0.50
+        videos: 0.40
+        stories: 0.10
+    pricing:
+      subscription_usd: 11.99
+      ppv_enabled: true
+      ppv_price_range: [8, 25]
+
+  # ---------------------------------------------------------------------------
+  # 6. Isabelle — Boho & Alternativo
+  # ---------------------------------------------------------------------------
+  isabelle:
+    display_name: "Isabelle"
+    enabled: true
+    credentials:
+      username: "${ISABELLE_OF_USERNAME}"
+    persona:
+      description: "Arte corporal, estilo indie e fotografia alternativa"
+      aesthetic: boho_alternative
+      tone_of_voice: "criativa, livre, espiritual"
+      language: "pt-BR"
+    style:
+      color_palette: ["#7B5EA7", "#E8C99A", "#4A7C59"]
+      mood: ["livre", "bohemio", "artístico"]
+    posting:
+      frequency: "2/day"
+      peak_hours: [16, 20, 22]
+      timezone: "America/Sao_Paulo"
+      content_types:
+        photos: 0.65
+        videos: 0.25
+        stories: 0.10
+    pricing:
+      subscription_usd: 10.99
+      ppv_enabled: true
+      ppv_price_range: [6, 20]
+
+  # ---------------------------------------------------------------------------
+  # 7. Marina — Praia & Tropical
+  # ---------------------------------------------------------------------------
+  marina:
+    display_name: "Marina"
+    enabled: true
+    credentials:
+      username: "${MARINA_OF_USERNAME}"
+    persona:
+      description: "Lifestyle costeiro, fotografia tropical e ao ar livre"
+      aesthetic: beach_tropical
+      tone_of_voice: "alegre, descontraída, solar"
+      language: "pt-BR"
+    style:
+      color_palette: ["#00B4D8", "#90E0EF", "#F4A261"]
+      mood: ["tropical", "ensolarado", "libertador"]
+    posting:
+      frequency: "2/day"
+      peak_hours: [10, 18, 21]
+      timezone: "America/Sao_Paulo"
+      content_types:
+        photos: 0.65
+        videos: 0.25
+        stories: 0.10
+    pricing:
+      subscription_usd: 9.99
+      ppv_enabled: true
+      ppv_price_range: [5, 20]

@@ -1,0 +1,63 @@
+# =============================================================================
+# OnlyFans Boudoir Pipeline — Configurações Globais
+# =============================================================================
+
+pipeline:
+  name: "onlyfans-boudoir-pipeline"
+  version: "0.1.0"
+  env: "${PIPELINE_ENV:development}"
+  timezone: "${PIPELINE_TIMEZONE:America/Sao_Paulo}"
+  dry_run: "${PIPELINE_DRY_RUN:false}"
+  log_level: "${PIPELINE_LOG_LEVEL:INFO}"
+
+# Configurações do agente interativo de IA
+agent:
+  provider: "${LLM_PROVIDER:openai}"
+  model: "${LLM_MODEL:gpt-4o}"
+  max_tokens: 4096
+  temperature: 0.7
+  memory_window: 20          # Número de mensagens mantidas no contexto
+  system_prompt: |
+    Você é um agente especializado em gestão de conteúdo para criadores
+    independentes. Analise métricas, sugira conteúdo e ajuste estratégias
+    de publicação de forma proativa. Seja objetivo e orientado a dados.
+
+# Configurações de storage de mídia
+media:
+  storage: "${MEDIA_STORAGE:local}"
+  local_path: "${MEDIA_PATH:./media}"
+  max_file_size_mb: 500
+  allowed_formats:
+    images: [jpg, jpeg, png, webp]
+    videos: [mp4, mov, avi]
+  watermark:
+    enabled: true
+    opacity: 0.3
+    position: bottom_right
+
+# Configurações de analytics
+analytics:
+  collect_interval_minutes: 30
+  retention_days: 365
+  metrics:
+    - subscribers_count
+    - new_subscribers
+    - cancelled_subscribers
+    - likes
+    - comments
+    - messages
+    - revenue
+    - ppv_revenue
+
+# Configurações de notificações
+notifications:
+  enabled: false
+  channels:
+    telegram:
+      enabled: false
+    slack:
+      enabled: false
+  alerts:
+    subscriber_drop_threshold: 0.05    # Alerta se queda > 5%
+    revenue_drop_threshold: 0.10       # Alerta se queda > 10%
+    upload_failure: true
