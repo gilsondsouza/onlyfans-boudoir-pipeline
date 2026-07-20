@@ -21,6 +21,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+web = [
+    "fastapi>=0.111.0",
+    "uvicorn[standard]>=0.30.0",
+]
 llm = [
     "openai>=1.30.0",
     "anthropic>=0.28.0",
@@ -42,14 +46,16 @@ dev = [
     "pytest-cov>=5.0.0",
     "ruff>=0.4.7",
     "mypy>=1.10.0",
+    "httpx>=0.27.0",
 ]
 all = [
-    "onlyfans-boudoir-pipeline[llm,media,storage,dev]",
+    "onlyfans-boudoir-pipeline[web,llm,media,storage,dev]",
 ]
 
 [project.scripts]
 boudoir-pipeline = "src.pipeline.__main__:main"
 boudoir-agent = "src.agent.__main__:main"
+boudoir-web = "src.web.__main__:main"
 
 # =============================================================================
 # Tool configuration

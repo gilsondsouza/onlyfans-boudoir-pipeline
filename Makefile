@@ -1,4 +1,4 @@
-.PHONY: help install install-dev lint format typecheck test test-cov run-agent run-pipeline clean
+.PHONY: help install install-dev install-web lint format typecheck test test-cov run-agent run-pipeline run-web clean
 
 # Detecta o Python disponível
 PYTHON ?= python3
@@ -13,6 +13,9 @@ install: ## Instala as dependências mínimas de runtime
 
 install-dev: ## Instala todas as dependências (runtime + dev)
 	$(PIP) install -r requirements.txt
+
+install-web: ## Instala dependências do dashboard web
+	$(PIP) install -e ".[web,dev]"
 
 lint: ## Verifica estilo e erros com ruff
 	ruff check src/ tests/
@@ -34,6 +37,9 @@ run-agent: ## Inicia o agente interativo (modo demo sem LLM real)
 
 run-pipeline: ## Executa o pipeline completo (dry-run)
 	$(PYTHON) -m src.pipeline run --dry-run
+
+run-web: ## Inicia o dashboard web em http://localhost:8000
+	$(PYTHON) -m src.web
 
 clean: ## Remove arquivos temporários e de build
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true

@@ -3,9 +3,10 @@
 ## Cursor Cloud specific instructions
 
 ### What this repo is
-`onlyfans-boudoir-pipeline` is a **single, self-contained Python CLI product** (no web server, no GUI, no database daemon required). It has two entry points:
+`onlyfans-boudoir-pipeline` is a **Python product** with CLI entry points plus a web dashboard. Entry points:
 - Content pipeline: `python3 -m src.pipeline` (subcommands `run`, `list-models`).
 - Interactive LLM agent: `python3 -m src.agent`.
+- Web dashboard: `python3 -m src.web` (FastAPI + static UI on http://localhost:8000). Requires `pip3 install -e ".[web,dev]"`.
 
 The pipeline steps and integrations (OnlyFans upload, media processing, storage, notifications) are currently **stubs**; the agent defaults to an offline `DemoBackend`. So the app runs end-to-end with **no external services, API keys, or network access**.
 
@@ -23,6 +24,7 @@ Standard commands are in the `Makefile` and `pyproject.toml`; use those. Quick r
 - Lint: `ruff check src/ tests/` (`make lint`). Typecheck: `mypy src/` (`make typecheck`).
 - Run pipeline: `python3 -m src.pipeline run --dry-run` (`make run-pipeline`), optionally `--model <name>`; list profiles with `python3 -m src.pipeline list-models`.
 - Run agent (offline demo): `python3 -m src.agent` (`make run-agent`); it reads stdin, so pipe input or type `sair` to exit.
+- Run web dashboard: `python3 -m src.web` (`make run-web`) → http://localhost:8000. API under `/api/*` (models, pipeline/run, agent/chat).
 
 ### Non-obvious caveats
 - `ruff check src/ tests/` and `mypy src/` currently **report pre-existing findings** in the source (newer tool versions add rules). These are code-quality issues in the repo, **not** environment breakage — do not treat them as setup failures.

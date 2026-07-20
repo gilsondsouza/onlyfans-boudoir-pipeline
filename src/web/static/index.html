@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boudoir Pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">Boudoir</span>
+      <span class="brand-sub">Pipeline</span>
+    </div>
+    <p class="tagline">Produção autônoma · 7 perfis · agente ao vivo</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel models-panel" aria-labelledby="models-title">
+      <div class="panel-head">
+        <h2 id="models-title">Modelos</h2>
+        <span class="badge" id="models-count">—</span>
+      </div>
+      <div class="models-grid" id="models-grid">
+        <p class="muted">Carregando perfis…</p>
+      </div>
+    </section>
+
+    <section class="panel pipeline-panel" aria-labelledby="pipeline-title">
+      <div class="panel-head">
+        <h2 id="pipeline-title">Pipeline</h2>
+        <label class="toggle">
+          <input type="checkbox" id="dry-run" checked />
+          <span>Dry-run</span>
+        </label>
+      </div>
+      <p class="panel-lead">
+        Selecione um modelo e dispare ingest → process → curate → schedule → upload.
+      </p>
+      <div class="run-row">
+        <select id="model-select" aria-label="Modelo para o pipeline">
+          <option value="">Escolha um modelo…</option>
+        </select>
+        <button type="button" class="btn primary" id="run-pipeline" disabled>
+          Executar
+        </button>
+      </div>
+      <div class="steps" id="pipeline-steps" hidden></div>
+      <pre class="summary" id="pipeline-summary" hidden></pre>
+    </section>
+
+    <section class="panel agent-panel" aria-labelledby="agent-title">
+      <div class="panel-head">
+        <h2 id="agent-title">Agente</h2>
+        <button type="button" class="btn ghost" id="reset-chat">Limpar</button>
+      </div>
+      <div class="chat-log" id="chat-log" role="log" aria-live="polite"></div>
+      <form class="chat-form" id="chat-form">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Pergunte sobre métricas, pautas ou calendário…"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="btn primary">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span id="health">API…</span>
+  </footer>
+
+  <script src="/static/app.js" type="module"></script>
+</body>
+</html>
